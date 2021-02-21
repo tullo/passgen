@@ -1,7 +1,7 @@
 SHELL = /bin/bash -o pipefail
 export REGISTRY_HOSTNAME = docker.io
 export REGISTRY_ACCOUNT = tullo
-export VERSION = 1.0
+export VERSION = 1.0.1
 
 passgen:
 	@docker buildx build -f dockerfile \
