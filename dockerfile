@@ -4,6 +4,6 @@ WORKDIR /cmd
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=mod -o passgen github.com/tullo/passgen/cmd
 
-FROM alpine:3.18.2
+FROM alpine:3.18.4
 COPY --from=build_stage /cmd/passgen /cmd/
 ENTRYPOINT ["/cmd/passgen"]
