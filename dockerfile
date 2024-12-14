@@ -1,5 +1,5 @@
 # Build the Go Binary.
-FROM golang:1.17.3-alpine3.13 as build_stage
+FROM golang:1.23-alpine3.21 as build_stage
 WORKDIR /cmd
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=mod -o passgen github.com/tullo/passgen/cmd
